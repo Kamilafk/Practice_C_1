@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main() {
+float temp;
+printf("Напишите температуру в Цельсия: \n");
+scanf("%d", &temp);
+printf("C= %d", temp);
+float faren;
+faren = (temp*9/5)+32;
+printf("F= %d", faren);
+  return 0;
