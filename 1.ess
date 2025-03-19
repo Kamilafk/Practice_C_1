@@ -3,8 +3,10 @@ int main() {
 float temp;
 printf("Напишите температуру в Цельсия: \n");
 scanf("%f", &temp);
-printf("C= %f", temp);
+printf("C= %f ;", temp);
 float faren;
 faren = (temp*9/5)+32;
-printf("F= %f", faren);
+printf(" F= %f", faren, "\n");
+
   return 0;
+  }
