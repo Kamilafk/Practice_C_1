@@ -1,22 +1,20 @@
 #include <stdio.h>
-#include <stdbool.h>
 
-int main() 
-{
+int main() {
   int num;
+
+  printf("Введите целое число: ");
+  scanf("%d", &num);
+
+  int parity = 2 - (num % 2); 
+  //Сначала вычисляем четность с помощью оператора %. Затем вычитаем результат из 2, чтобы 0 заменить на 2 и единица осталась.
+  //В итоге у нас четность или будет равна 2, или 1.
+
+  parity = parity & 1;
+  //Здесь, если сначала parity 2, после побитовой операции parity будет 0 (не совпадают биты)
+  //Если будет 1, после побитовой операции parity будет 1 (т.е. число четное)
   
-  printf( "Напишите целое число: \n" );
-  scanf( "%d", &num );
-  printf( "Ваше число:%d; ", num );
+  printf("%d", parity);
   
-  int i;
-  
-  num = num % 2;
-  bool chetnost = ( num == 0 );
-  
-  const char* result = chetnost ? "Число четное" : "Число нечетное" ;
-  
-  printf( "%s\n", result );
- 
   return 0;
 }
