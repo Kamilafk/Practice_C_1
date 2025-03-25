@@ -15,6 +15,8 @@ int main() {
         case 1:
             printf( "Число нечетное" );
             break;
+        default:
+            printf( "Попробуйте ввеcти другое число" );
     }
 
     return 0;
