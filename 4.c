@@ -7,9 +7,13 @@ int main() {
   scanf( "%d", &num );
 
   int positive = ( num  >  0 ); //Определение положительности числа
-
-  int power = !( num & ( num - 1 ) ); //Побитовый оператор для определения ялвяется ли число степенью двойки
-
+  
+  int num2 = num - 1; 
+  
+  int bit = num & num2; //Побитовая операция между числом и числом уменьшенным на 1
+  
+  int power = !bit;  //Перевернутый результат
+  
   int result = positive && power; 
 
   printf( "%d", result );
